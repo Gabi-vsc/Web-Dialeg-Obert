@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dialeg Obert</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+
+    
+    <!-- Sección Header 
+     - Logo (h1)
+     - Nav Bar / Menús de navegación
+     - Botón hamburguesa  
+    -->
+     
+    <header class="Header">
+        <div class="Wrapper Header-wrapper">
+            <h1 class="Header-h1">DIÀLEG OBERT</h1>
+            
+            <nav class="Header-nav" id="Header-nav" aria-label="Navegación principal">
+                <ul class="Header-ul">
+
+                    <li class="Header-li">
+                        <a href="#" class="Header-a">Labs,</a>
+                    </li> 
+                    <li class="Header-li">
+                        <a href="#" class="Header-a">Investigación,</a>
+                    </li> 
+                    <li class="Header-li">
+                        <a href="#" class="Header-a">Editorial,</a>
+                    </li> 
+                    <li class="Header-li">
+                        <a href="#" class="Header-a">Contacto,</a>
+                    </li> 
+                </ul>
+            </nav>
+
+            <button class="Header-menuButton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="Header-nav">
+             <img src="assets/imgs/svg/icono-hamburguesa.svg" alt="Icono menú hamburguesa">
+            </button>
+        </div>
+    </header>
+    
+
+
+    <main>
+
+
+        <!-- Sección h2 
+         - Frase introductoria (h2) 
+        -->
+
+        <section class="Text">
+            <div class="Wrapper--main-special Text-wrapper">
+                <h2 class="Text-h2">
+                    Diez años en la intersección de las <strong class="Strong">artes vivas</strong> y <strong class="Strong">la experimentación sonora</strong>.
+                </h2>
+            </div>
+        </section>
+
+
+
+        <!-- Sección Slider
+         - En este caso, las imgs van por parejas dentro de un contenedor
+         - !Hacer que al entrar con hover se pausen las imagenes
+        -->
+    
+        <div class="Slider">
+            <div class="Slider-media">
+                <div class="Slider-container ">
+                    <picture>
+                        <source srcset="assets/imgs/compressed/dennys-grupo-500.webp" type="image/webp" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/dennys-grupo-800.webp" type="image/webp" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/dennys-grupo-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+                        <source srcset="assets/imgs/compressed/dennys-grupo-500.jpg" type="image/jpg" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/dennys-grupo-800.jpg" type="image/jpg" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/dennys-grupo-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+                        <img src="assets/imgs/original/dennys-grupo.jpg" alt="Imagen del taller" class="Slider-img">
+                    </picture>
+                    
+                    <picture>
+                        <source srcset="assets/imgs/compressed/lorena-cinta-500.webp" type="image/webp" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/lorena-cinta-800.webp" type="image/webp" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/lorena-cinta-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <source srcset="assets/imgs/compressed/lorena-cinta-500.jpg" type="image/jpg" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/lorena-cinta-800.jpg" type="image/jpg" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/lorena-cinta-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <img src="assets/imgs/original/lorena-cinta.jpg" alt="Imagen del taller" class="Slider-img">
+                    </picture>
+                </div>
+                <div class="Slider-container">
+                    <picture>
+                        <source srcset="assets/imgs/compressed/kira-escalera-500.webp" type="image/webp" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/kira-escalera-800.webp" type="image/webp" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/kira-escalera-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <source srcset="assets/imgs/compressed/kira-escalera-500.jpg" type="image/jpg" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/kira-escalera-800.jpg" type="image/jpg" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/kira-escalera-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <img src="assets/imgs/original/kira-escalera.jpg" alt="Imagen del taller" class="Slider-img">
+                    </picture>
+                    <picture>
+                        <source srcset="assets/imgs/compressed/mario-cucharas-500.webp" type="image/webp" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/mario-cucharas-800.webp" type="image/webp" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/mario-cucharas-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <source srcset="assets/imgs/compressed/mario-cucharas-500.jpg" type="image/jpg" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/mario-cucharas-800.jpg" type="image/jpg" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/mario-cucharas-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <img src="assets/imgs/original/mario-cucharas.jpg" alt="Imagen del taller" class="Slider-img">
+                    </picture>
+                </div>
+                <div class="Slider-container">
+                    <picture>
+                        <source srcset="assets/imgs/compressed/alastair-grupo-500.webp" type="image/webp" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/alastair-grupo-800.webp" type="image/webp" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/alastair-grupo-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <source srcset="assets/imgs/compressed/alastair-grupo-500.jpg" type="image/jpg" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/alastair-grupo-800.jpg" type="image/jpg" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/alastair-grupo-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <img src="assets/imgs/original/alastair-grupo.jpg" alt="Imagen del taller" class="Slider-img">
+                    </picture>
+                    <picture>
+                        <source srcset="assets/imgs/compressed/apuntes-taller-500.webp" type="image/webp" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/apuntes-taller-800.webp" type="image/webp" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/apuntes-taller-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <source srcset="assets/imgs/compressed/apuntes-taller-500.jpg" type="image/jpg" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/apuntes-taller-800.jpg" type="image/jpg" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/apuntes-taller-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <img src="assets/imgs/original/apuntes-taller.jpg" alt="Imagen del taller" class="Slider-img">
+                    </picture>
+                </div>
+                <div class="Slider-container">
+                   <picture>
+                       <source srcset="assets/imgs/compressed/dennys-500.webp" type="image/webp" media="(max-width:480px)">
+                       <source srcset="assets/imgs/compressed/dennys-800.webp" type="image/webp" media="(min-width:481px)">
+                       <source srcset="assets/imgs/compressed/dennys-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+                       
+                       <source srcset="assets/imgs/compressed/dennys-500.jpg" type="image/jpg" media="(max-width:480px)">
+                       <source srcset="assets/imgs/compressed/dennys-800.jpg" type="image/jpg" media="(min-width:481px)">
+                       <source srcset="assets/imgs/compressed/dennys-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+                       
+                       <img src="assets/imgs/original/dennys.jpg" alt="Imagen del taller" class="Slider-img">
+                   </picture>
+                   <picture>
+                       <source srcset="assets/imgs/compressed/grupo-circulo-500.webp" type="image/webp" media="(max-width:480px)">
+                       <source srcset="assets/imgs/compressed/grupo-circulo-800.webp" type="image/webp" media="(min-width:481px)">
+                       <source srcset="assets/imgs/compressed/grupo-circulo-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+                       
+                       <source srcset="assets/imgs/compressed/grupo-circulo-500.jpg" type="image/jpg" media="(max-width:480px)">
+                       <source srcset="assets/imgs/compressed/grupo-circulo-800.jpg" type="image/jpg" media="(min-width:481px)">
+                       <source srcset="assets/imgs/compressed/grupo-circulo-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+                       
+                       <img src="assets/imgs/original/grupo-circulo.jpg" alt="Imagen del taller" class="Slider-img">
+                   </picture>
+                </div>
+                </div>
+        </div>
+
+
+        <!-- Sección Partners 
+         - Slider infinito con logos de los partners
+        -->
+
+        <div class="Partners">
+            <div class= "Wrapper Wrapper-partners">
+                <ul class="Partners-ul">
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-generalitat.svg" alt="Logo gva" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-institut-cultura.svg" alt="Logo Institut de cultura" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-tem.svg" alt="Logo Teatre el musical" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-mutant.svg" alt="Logo La mutant" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-accionmad.svg" alt="Logo AcccionMad" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-pice.svg" alt="Logo PICE" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-nipaf.svg" alt="Logo NIPAF" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-pas.svg" alt="Logo Performance Art Studies" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-norsk.svg" alt="Logo Norsk Kulturfond" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-p-arte.svg" alt="Logo p.ARTE" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-pao.svg" alt="Logo Performance Art Oslo" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-consorci.svg" alt="Logo Consorci de Museus" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-kuhlspot.svg" alt="Logo Kuhlspot Social Club" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-exchange.svg" alt="Logo Exchange Live Art" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-konvent.svg" alt="Logo Konvent Kollectiv" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-pab.svg" alt="Logo Performance Art Bergen" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-pia.svg" alt="Logo PIA" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-pas-pas.svg" alt="Logo PAS" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-crefada.svg" alt="Logo Crefada" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-bergen.svg" alt="Logo Bergen Kommune" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-vestland.svg" alt="Logo Vestland County Council" class="Partners-img" loading="lazy">
+                    </li>
+                </ul>
+                
+                <ul class="Partners-ul">
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-generalitat.svg" alt="Logo gva" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-institut-cultura.svg" alt="Logo Institut de cultura" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-tem.svg" alt="Logo Teatre el musical" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-mutant.svg" alt="Logo La mutant" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-accionmad.svg" alt="Logo AcccionMad" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-pice.svg" alt="Logo PICE" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-nipaf.svg" alt="Logo NIPAF" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-pas.svg" alt="Logo Performance Art Studies" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-norsk.svg" alt="Logo Norsk Kulturfond" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-p-arte.svg" alt="Logo p.ARTE" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-pao.svg" alt="Logo Performance Art Oslo" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-consorci.svg" alt="Logo Consorci de Museus" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-kuhlspot.svg" alt="Logo Kuhlspot Social Club" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-exchange.svg" alt="Logo Exchange Live Art" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-konvent.svg" alt="Logo Konvent Kollectiv" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-pab.svg" alt="Logo Performance Art Bergen" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-pia.svg" alt="Logo PIA" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-pas-pas.svg" alt="Logo PAS" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-crefada.svg" alt="Logo Crefada" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-bergen.svg" alt="Logo Bergen Kommune" class="Partners-img" loading="lazy">
+                    </li>
+                    <li class="Partners-li">
+                        <img src="assets/imgs/svg/logo-vestland.svg" alt="Logo Vestland County Council" class="Partners-img" loading="lazy">
+                    </li>
+                
+                </ul>
+
+            </div>
+        </div>
+
+        
+        <!-- Sección About 
+         - Texto presentación-->
+
+        <div class="About">
+            <div class="Wrapper--main About-wrapper">
+                <div class="About-text">
+    
+                    <p class="About-p">
+                        Somos una plataforma artística dedicada a la exploración interdisciplinar y divulgación de las artes vivas y la experimentación sonora. 
+                    </p>
+                    <p class="About-p">
+                        Nuestro principal objetivo implica generar y promover el diálogo, colaboración y cruce de estas disciplinas, fortaleciendo las comunidades artísticas, ampliando los alcances y temáticas de las prácticas y desarrollando nuevos modelos de gestión cultural que integran la investigación artística de manera transversal. 
+                    </p>
+                    <p class="About-p">
+                        Creemos en la experimentación desde el diálogo entre distintas disciplinas, proponiendo procesos creativos relacionales que expandan los márgenes de las prácticas artísticas.             
+                    </p>
+
+                </div>
+            </div>
+            
+        </div>
+
+        
+        <!-- Sección Workshops --------------------------------->
+       
+        <section class="Workshops">
+            <div class="Wrapper--main-special Workshops-wrapper">
+
+                <header class="Section-header">
+                    <h2 class="Section-h2"> <b>Labs |</b> Archivo</h2>
+                    <a href="#" title="See Season'26" class="Section-a">Ver todos</a> <!-- Tengo que ver la ruta del a, si va dentro de header, si me gusta nombres clases -->
+                </header>
+
+            </div>
+            <div class="Workshops-carrousel">
+                <article class="Workshops-card">
+                    <picture>
+                        <source srcset="assets/imgs/compressed/saadett-500.webp" type="image/webp" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/saadett-800.webp" type="image/webp" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/saadett-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <source srcset="assets/imgs/compressed/saadett-500.jpg" type="image/jpg" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/saadett-800.jpg" type="image/jpg" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/saadett-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+ 
+                        <img src="assets/imgs/original/saadett.jpg" alt="Imagen del taller" class="Workshops-img">
+                    </picture>                         
+                    <div class="Workshops-overlay">
+                        <h3 class="Workshops-h3">'La voz como material'. Saadet Türköz</h3>
+                        <a href="#" title="Enlace a Workshop" class="Workshops-a"> Saber más </a> 
+                    </div>
+                </article>
+
+                <article class="Workshops-card">
+                    <picture>
+                        <source srcset="assets/imgs/compressed/marilyn-500.webp" type="image/webp" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/marilyn-800.webp" type="image/webp" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/marilyn-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <source srcset="assets/imgs/compressed/marilyn-500.jpg" type="image/jpg" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/marilyn-800.jpg" type="image/jpg" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/marilyn-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+ 
+ 
+                        <img src="assets/imgs/original/marilyn.jpg" alt="Imagen del taller" class="Workshops-img">
+                    </picture>                          
+                    <div class="Workshops-overlay">
+                        <h3 class="Workshops-h3">'Considerando el tiempo'. Marilyn Arsem</h3>
+                        <a href="#" title="Enlace a Workshop" class="Workshops-a">Saber más </a> 
+                    </div>
+                </article>
+                <article class="Workshops-card">
+                    <picture>
+                        <source srcset="assets/imgs/compressed/seiji-500.webp" type="image/webp" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/seiji-800.webp" type="image/webp" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/seiji-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <source srcset="assets/imgs/compressed/seiji-500.jpg" type="image/jpg" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/seiji-800.jpg" type="image/jpg" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/seiji-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <img src="assets/imgs/original/seiji.jpg" alt="Imagen del taller" class="Workshops-img">
+                    </picture>                         
+                    <div class="Workshops-overlay">
+                        <h3 class="Workshops-h3">'Lab para el medio inestable'. Seijiro Shimoda</h3>
+                        <a href="#" title="Enlace a Workshop" class="Workshops-a"> Saber más </a> 
+                    </div>
+                </article>
+                <article class="Workshops-card">
+                    <picture>
+                        <source srcset="assets/imgs/compressed/alastair-500.webp" type="image/webp" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/alastair-800.webp" type="image/webp" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/alastair-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <source srcset="assets/imgs/compressed/alastair-500.jpg" type="image/jpg" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/alastair-800.jpg" type="image/jpg" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/alastair-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+ 
+                        <img src="assets/imgs/original/alastair.jpg" alt="Imagen del taller" class="Workshops-img">
+                    </picture>                  
+                        
+                    <div class="Workshops-overlay">
+                        <h3 class="Workshops-h3">'El tiempo con-sentido'. Alastair McLennan</h3>
+                        <a href="#" title="Enlace a Workshop" class="Workshops-a"> Saber más</a> 
+                    </div>
+                </article>
+
+                <article class="Workshops-card">
+                    <picture>
+                        <source srcset="assets/imgs/compressed/wade-500.webp" type="image/webp" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/wade-800.webp" type="image/webp" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/wade-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+                        
+                        <source srcset="assets/imgs/compressed/wade-500.jpg" type="image/jpg" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/wade-800.jpg" type="image/jpg" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/wade-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+ 
+                        <img src="assets/imgs/original/wade.jpg" alt="Imagen del taller" class="Workshops-img">
+                    </picture>                         
+                    <div class="Workshops-overlay">
+                        <h3 class="Workshops-h3">'Gramática sonora'. Wade Mathews</h3>
+                        <a href="#" title="Enlace a Workshop" class="Workshops-a"> Saber más</a> 
+                    </div>
+                </article>
+    
+            </div>
+        </section>     
+
+
+
+
+        <!-- Sección h2 
+         - Frase introductoria (h2) ----------------------------->
+
+        <section class="Wrapper--main Text-section">
+            <h2 class="Text-h2">
+                Investigando nuevos territorios experimentales con +40 artistas .
+            </h2>
+        </section>
+
+        <!-- Sección Nombres ------------------------------>
+
+        <div class="Names">
+            <div class="Wrapper--main Names-Wrapper">
+                <ul class="Names-ul">
+                    <li class="Names-li"><a href="" class="Names-a">Agnes Hvizdalek</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Alastair McLennan</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Alexandra Zierle</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Andrea Neumann</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Audrey Chen</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Axel Dorner</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Chefa Alonso</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Cristian Kesten</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Denys Blacker</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Elliot Sharp</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Elvira Santamaría</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Exchange Live Art</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Helgue Meyer</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Javier Martín</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Josep-Maria Balanyà</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Marilyn Arsem</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Marita Bullman</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Martine</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Monica Günther</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Mónica Valenciano</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Natsuko Tezuka</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Nieves Correa & Abel Loureda</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Nuria Andorra</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Pavana Reid</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Performance Art Studies</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Phil Milton</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Ricardo Tejero</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Saadet Turköz</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Sandra Johnston</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Seijiro Murayama</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Seijiro Shimoda</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Serge Pey & Chiara Mulas</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Steffi Wassermann</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Stephan Us</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Thomas y Selina</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Ute Wassernann</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Wade Matthew</a></li>
+                    <li class="Names-li"><a href="" class="Names-a">Walter Thompson</a></li>
+                </ul>
+            </div>
+
+
+
+        </div>
+
+ 
+
+        <!-- Sección Sticky------------------------------------->
+
+        <section class="Sticky">
+            <div class="Wrapper--main Sticky-wrapper">
+                <div class="Sticky-media">
+                    <header class="Section-header">
+                        <h2 class="Section-h2"><b>Magazine |</b> Lo último</h2>
+                    </header>
+                    <picture>
+                        <source srcset="assets/imgs/compressed/casas-zoom-500.webp" type="image/webp" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/casas-zoom-800.webp" type="image/webp" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/casas-zoom-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+
+                        <source srcset="assets/imgs/compressed/casas-zoom-500.jpg" type="image/jpg" media="(max-width:480px)">
+                        <source srcset="assets/imgs/compressed/casas-zoom-800.jpg" type="image/jpg" media="(min-width:481px)">
+                        <source srcset="assets/imgs/compressed/casas-zoom-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+
+                        
+                        <img src="assets/imgs/original/casas-zoom.jpg" alt="Imagen de una acción sobre un árbol" class="Sticky-img">
+                    </picture>                
+                </div>
+                <div class="Sticky-info">
+                    <p class="Sticky-p">
+                        “Cuando estás componiendo en directo no puedes volver atrás, no puedes repensar, tienes que jugar con los errores y adaptarte a ellos. 
+                        En la improvisación pasa todo en el mismo momento, estás delante del público que es parte del proceso de cocina para llegar a algo. 
+                        Tiene más que ver con la música la composición improvisada que la escrita, una partitura no es música, la improvisación sí es música porque se trabaja con el sonido”.
+                    </p>                  
+
+                    <h3 class="Sticky-h3">
+                        Improvisación y composición escrita. Entrevista a Chefa Alonso 
+                    </h3>                   
+                    <a href="#" title="Leer artículo completo" class="Sticky-a">Leer artículo completo</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección Magazine --------------------------------->
+
+        <section class="Magazine">
+            <div class="Wrapper--main Magazine-wrapper">
+
+                <header class="Section-header">
+                    <h2 class="Section-h2"><b>Magazine |</b> Publicaciones anteriores </h2>
+                    <a href="#" title="Ver todos los artículos" class=" Section-a">Ver todas</a> 
+                </header>
+
+                <div class="Magazine-carrousel">
+                    <article class="Magazine-article">
+                        <picture class="Magazine-picture">
+                            <source srcset="assets/imgs/compressed/mud-camara-500.webp" type="image/webp" media="(max-width:480px)">
+                            <source srcset="assets/imgs/compressed/mud-camara-800.webp" type="image/webp" media="(min-width:481px)">
+                            <source srcset="assets/imgs/compressed/mud-camara-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+
+                            <source srcset="assets/imgs/compressed/mud-camara-500.jpg" type="image/jpg" media="(max-width:480px)">
+                            <source srcset="assets/imgs/compressed/mud-camara-800.jpg" type="image/jpg" media="(min-width:481px)">
+                            <source srcset="assets/imgs/compressed/mud-camara-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+
+                            <img src="assets/imgs/original/mud-camara.jpg" alt="Imagen de una acción de Gutai" class="Magazine-img">
+                        </picture>  
+                        <h3 class="Magazine-h3">Sobre una poesía de lo gestual. Enseñanzas de Gutai</h3>
+                        <a href="#" class="Magazine-a">Leer artículo</a>
+                    </article>
+
+                    <article class="Magazine-article">
+                        <picture class="Magazine-picture">
+                            <source srcset="assets/imgs/compressed/casas-500.webp" type="image/webp" media="(max-width:480px)">
+                            <source srcset="assets/imgs/compressed/casas-800.webp" type="image/webp" media="(min-width:481px)">
+                            <source srcset="assets/imgs/compressed/casas-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+
+                            <source srcset="assets/imgs/compressed/casas-500.jpg" type="image/jpg" media="(max-width:480px)">
+                            <source srcset="assets/imgs/compressed/casas-800.jpg" type="image/jpg" media="(min-width:481px)">
+                            <source srcset="assets/imgs/compressed/casas-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+
+                            <img src="assets/imgs/original/casas.jpg" alt="Imagen de acción del colectivo de Frankfurt" class="Magazine-img">
+                        </picture>  
+                        <h3 class="Magazine-h3">La acción duracional. Colectivo de Frankfurt</h3>
+                        <a href="#" class="Magazine-a">Leer artículo</a>
+                    </article>
+
+                    <article class="Magazine-article">
+                        <picture class="Magazine-picture">
+                            <source srcset="assets/imgs/compressed/mendieta-500.webp" type="image/webp" media="(max-width:480px)">
+                            <source srcset="assets/imgs/compressed/mendieta-800.webp" type="image/webp" media="(min-width:481px)">
+                            <source srcset="assets/imgs/compressed/mendieta-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+
+                            <source srcset="assets/imgs/compressed/mendieta-500.jpg" type="image/jpg" media="(max-width:480px)">
+                            <source srcset="assets/imgs/compressed/mendieta-800.jpg" type="image/jpg" media="(min-width:481px)">
+                            <source srcset="assets/imgs/compressed/mendieta-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+
+                            <img src="assets/imgs/original/mendieta.jpg" alt="Imagen de Ana Mendieta" class="Magazine-img">
+                        </picture>  
+                        <h3 class="Magazine-h3">La sensibilidad nativa hacia el medio. Ana Mendieta</h3>
+                        <a href="#" class="Magazine-a">Leer artículo</a>
+                    </article>
+
+                    <article class="Magazine-article">
+                        <picture class="Magazine-picture">
+                            <source srcset="assets/imgs/compressed/dennys-gesto-500.webp" type="image/webp" media="(max-width:480px)">
+                            <source srcset="assets/imgs/compressed/dennys-gesto-800.webp" type="image/webp" media="(min-width:481px)">
+                            <source srcset="assets/imgs/compressed/dennys-gesto-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+
+                            <source srcset="assets/imgs/compressed/dennys-gesto-500.jpg" type="image/jpg" media="(max-width:480px)">
+                            <source srcset="assets/imgs/compressed/dennys-gesto-800.jpg" type="image/jpg" media="(min-width:481px)">
+                            <source srcset="assets/imgs/compressed/dennys-gesto-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+
+                            <img src="assets/imgs/original/dennys-gesto.jpg" alt="Imagen del taller de Dennys Blacker" class="Magazine-img">
+                        </picture>  
+                        <h3 class="Magazine-h3">La energía en la acción. Entrevista a Dennys Blacker</h3>
+                        <a href="#" class="Magazine-a">Leer artículo</a>
+                    </article>
+
+                    <article class="Magazine-article">
+                        <picture class="Magazine-picture">
+                            <source srcset="assets/imgs/compressed/lorena-kira-500.webp" type="image/webp" media="(max-width:480px)">
+                            <source srcset="assets/imgs/compressed/lorena-kira-800.webp" type="image/webp" media="(min-width:481px)">
+                            <source srcset="assets/imgs/compressed/lorena-kira-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+
+                            <source srcset="assets/imgs/compressed/lorena-kira-500.jpg" type="image/jpg" media="(max-width:480px)">
+                            <source srcset="assets/imgs/compressed/lorena-kira-800.jpg" type="image/jpg" media="(min-width:481px)">
+                            <source srcset="assets/imgs/compressed/lorena-kira-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+
+                            <img src="assets/imgs/original/lorena-kira.jpg" alt="Imagen de Lorena Izquierdo" class="Magazine-img">
+                        </picture>  
+                        <h3 class="Magazine-h3">El intercambio entre artista y el espectador.</h3>
+                        <a href="#" class="Magazine-a">Leer artículo</a>
+                    </article>
+                                    
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección Newsletter -->
+        
+        <section class="Newsletter">
+            <div class="Wrapper--main Newsletter-wrapper">
+                <picture class="Newsletter-picture">
+                    <source srcset="assets/imgs/compressed/marina-500.webp" type="image/webp" media="(max-width:480px)">
+                    <source srcset="assets/imgs/compressed/marina-800.webp" type="image/webp" media="(min-width:481px)">
+                    <source srcset="assets/imgs/compressed/marina-1200.webp" type="image/webp" media="(min-width:768px) and (max-width:1200px)">
+
+                    <source srcset="assets/imgs/compressed/marina-500.jpg" type="image/jpg" media="(max-width:480px)">
+                    <source srcset="assets/imgs/compressed/marina-800.jpg" type="image/jpg" media="(min-width:481px)">
+                    <source srcset="assets/imgs/compressed/marina-1200.jpg" type="image/jpg" media="(min-width:768px) and (max-width:1200px)">
+
+                    <img src="assets/imgs/original/marina.jpg" alt="Imagen de una acción de Marina Abramovic" class="Newsletter-img">
+                </picture>          
+            
+                <div class="Newsletter-info">
+                    <h2 class="Newsletter-title">Ponte al día cada semana de los próximos eventos, labs, publiaciones y noticias. </h2>
+                    
+                    <div class="Newsletter-content">
+                        <form class="Newsletter-form" method="post" action="#">
+                            <label for="name" class="Newsletter-label">Nombre</label>
+                            <input type="text" id="name" name="name" required class="Newsletter-input">
+
+                            <label for="email" class="Newsletter-label">Email </label>
+                            <input type="email" id="email" name="email" required class="Newsletter-input">
+                            
+                            <button type="submit" class="Newsletter-btn">Quiero estar al día :)</button>
+                        </form>
+
+                        
+                    </div>  
+                </div>
+            </div>
+        </section>
+
+        
+ 
+    </main>
+
+
+
+    <!-- Footer ------------------------------------------------------------------>
+
+    <footer class="Footer">
+        <div class="Wrapper Footer-wrapper">
+            <h3 class="Footer-h3">Contacto</h3>
+            <div class="Footer-contact">
+                <a href="mailto:dialegobert@gmail.com" class="Footer-email">dialegobert@gmail.com</a>
+                <ul class="Footer-ul">
+
+                    <li class="Footer-li">
+                        <a href="https://www.facebook.com/dialegobert/?locale=es_ES" title="enlace a web de Facebook" target="_blank" rel="noopener noreferrer" class="Footer-a">
+                            <img src="assets/imgs/svg/logo-facebook.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="Footer-li">
+                        <a href="https://www.instagram.com/dialeg_obert/" title="enlace a cuenta de Instagram" target="_blank" rel="noopener noreferrer" class="Footer-a">
+                            <img src="assets/imgs/svg/logo-instagram.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="Footer-li">
+                        <a href="https://www.youtube.com/@dialegobert3998" title="enlace a canal de Youtube" target="_blank" rel="noopener noreferrer" class="Footer-a">
+                            <img src="assets/imgs/svg/logo-youtube.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+
+</body>
+</html>

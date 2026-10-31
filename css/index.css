@@ -1,0 +1,889 @@
+*{
+margin: 0;
+padding: 0;
+border: 0;
+box-sizing: border-box;
+}
+
+li {
+list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-size: inherit;
+font-weight: inherit;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+display: block;
+}
+
+p a {
+display: inline;
+}
+img, picture, video, iframe, svg {
+display: block;
+width: 100%;
+height: initial;
+}
+svg {
+fill: currentColor;
+}
+
+body{}
+
+:root {
+font-size: 100%;
+font-family: 'Helvetica Neue Light';
+overflow-x: hidden;
+
+
+/* Pesos tipográficos */
+
+--font-size-xxl:  64px;
+--font-size-xl:  48px;
+--font-size-l:  40px;
+--font-size-m:  32px;
+--font-size-s: 24px;
+--font-size-xs: 20px;
+--font-size-xxs:  16px; 
+
+
+/* Decoración hover header */
+
+--height-line: 2px;
+
+}
+
+
+@font-face {
+    font-family: 'Helvetica Neue Regular';
+    src: url('assets/type/HelveticaNeueRoman.otf');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    src: url('assets/type/HelveticaNeueLight.otf');
+}
+
+
+
+html {
+scroll-behavior: smooth;
+}
+
+
+/* Fin del reset ------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Elementos reutilizables: ----------------------------*/
+
+
+
+/* Wrappers:
+- Wrapper para Header y para Footer
+- Wrapper--main para secciones web */
+
+.Wrapper {
+    margin: auto;
+    padding: 1rem clamp(1rem, 3vw, 2rem);
+    /* background-color:antiquewhite; */
+}
+
+.Wrapper--main {
+    margin: auto;
+    padding: 8rem clamp(1rem, 3vw, 2rem);
+}
+
+.Wrapper--main-special {
+    padding: 8rem clamp(1rem, 3vw, 2rem) 0;
+}
+
+
+
+/* Encabezado de sección:
+- h2
+- link <a> */
+
+.Section-header{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    /* background-color: lightblue; */
+}
+.Section-h2{
+    font-size: var(--font-size-s);
+}
+
+.Section-a{
+    font-size: var(--font-size-xs);
+    display: inline-block;
+}
+
+
+
+
+/* CSS Web ------------------------------------------------------------------------------------------ */
+
+/* 1. Sección Header */
+
+.Header{
+    width: 100%;
+    height: auto;
+    
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.Header-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.Header-h1{
+    font-family: 'Helvetica Neue Regular';
+    font-size: var(--font-size-l);
+    
+}
+
+/* Botón del menú hamburguesa oculto por defecto y visible solo en móviles */
+.Header-menuButton {
+    display: none;
+    width: 2.75rem;
+    height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+}
+
+.Header-menuButton img {
+    display: block;
+    width: 1.75rem;
+    height: auto;
+}
+
+.Header-nav{}
+
+.Header-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    font-size: var(--font-size-xs);
+    font-family: 'Helvetica Neue Regular';
+}
+
+.Header-a::after, .Section-a::after, .Magazine-a::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: var(--height-line);
+    background-color: black;
+    transition: width 0.2s;  /*lo que queremos que cambie + cuanto tiempo tardara */
+}
+
+.Header-a:hover::after, .Section-a:hover::after, .Magazine-a:hover::after {
+    width: 100%;
+}
+
+
+
+/* 3. Sección h2 ----------------------------------------------*/
+
+
+.Text {
+    /* width: 100%; */
+}
+
+.Text-wrapper {
+    margin: 10rem 0;
+    display: flex;
+}
+.Text-h2 {
+    width: 100%;
+    font-size: var(--font-size-xxl);
+    text-align: left;
+}
+
+
+
+
+
+
+/* 4. Sección Slider imágenes ---------------------------------------------*/
+
+
+.Slider {
+    width: 100%;
+}
+.Slider-wrapper {
+
+}
+.Slider-media {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    padding-inline: clamp(1rem, 3vw, 2rem);
+}
+
+.Slider-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-area: 1 / 1;
+    align-items: stretch;
+    gap: clamp(0.5rem, 1vw, 1rem);
+    width: 100%;
+    opacity: 0;
+    margin-top: 2rem;
+    transition: opacity 0.5s ease;
+}
+
+.Slider-container picture {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.Slider-container.isVisible {
+    opacity: 1;
+}
+
+.Slider-container .Slider-img {
+    position: static;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 3 / 2;
+    opacity: 1;
+}
+
+
+
+/* 5. Sección Partners -------------------------------------------------*/
+
+
+.Partners {
+    width: 100%;
+    overflow: hidden;
+    margin: 15rem auto;
+    /* background-color: red; */
+}
+
+.Wrapper-partners {
+    display: flex;
+    flex-flow: row nowrap;
+    width: max-content;
+    animation: slide 60s linear infinite;
+}
+
+.Partners-ul {
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    width: max-content;
+    padding: 1rem 1rem;
+    gap: 2.5rem;
+}
+
+.Wrapper-partners:hover {
+    animation-play-state: paused;
+}
+
+.Partners-li {
+    flex: 0 0 auto;
+}
+
+
+.Partners-img {
+    width: auto;
+    height: 50px;
+    object-fit: contain;
+}
+
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+
+/* 6. Sección About------------------------------------------------- */
+
+.About {
+    width: 100%;
+}
+.About-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+
+    position: relative;
+
+}
+
+.About-text {
+    width: calc(100%/2);
+    width: 100%;
+}
+
+.About-p {
+    font-size: var(--font-size-xl);
+    margin-bottom: 2.5rem;
+
+}
+
+.About-img {
+    background-color: lightblue;
+    position: sticky;
+}
+
+
+
+
+
+/* 7. Sección Workshops ------------------------------------------------*/
+
+
+.Workshops{
+    width: 100%;
+    margin-bottom: 8rem;
+
+}
+
+.Workshops-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+
+}
+
+.Workshops-carrousel {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    overflow-x:auto; /* permite desplazamiento horizontal tactil*/
+    overflow-y:hidden;
+    scroll-snap-type: x mandatory; /*Para que no pare a mitad de dos cards, que queda poco estético*/
+    scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+}
+
+.Workshops-card{
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 360px;     /* Ajusta el ancho de cada card */
+    scroll-snap-align: start;     /*Ajusta la posicion de la card al soltar*//* Alinea la card al inicio del contenedor */
+    user-select: none;
+}
+
+.Workshops-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease, filter 0.25s ease;
+}
+
+.Workshops-tag{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color:rgba(255,255,255,0.8);
+    color:black;
+    padding: 12px 12px;
+    border-radius: 15px;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efecto suave */
+}
+
+.Workshops-overlay{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+.Workshops-card.is-active .Workshops-overlay {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.Workshops-card.is-active .Workshops-img {
+    filter:opacity(0.5);
+    transform: scale(1.05);
+}
+.Workshops-h3{
+    font-size: var(--font-size-l);
+}
+
+.Workshops-a{
+    width: fit-content;
+    background-color:rgba(255,255,255,0.8);
+    color:black;
+    padding: 12px 12px;
+    border-radius: 15px;
+    font-size: var(--font-size-tag);
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition:0.3s ease,0.2s ease;
+}
+.Workshops-a:hover {
+    background-color:rgba(255, 255, 255, 0.9);
+}
+
+
+
+
+/* 8. Sección Names -------------------------------------------------------------*/
+
+
+.Names {
+    width: 100%;
+}
+.Names-Wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Names-ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+.Names-li {
+    font-family: 'Helvetica Neue Light';
+    font-size: var(--font-size-l);
+    text-align: center;
+    
+    transition: all 0.2s;
+}
+.Names-li:hover {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.5px black;
+}
+.Names-a {
+
+}
+
+/* 9. Sección Interview --------------------------------------------------*/
+
+
+.Sticky {
+    width: 100%;
+}
+.Sticky-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.Sticky-media {
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 8rem;
+    align-self: start; /*conserva su altura natural y se alinea al inicio*/
+}
+.Sticky-h2 {
+    margin-bottom: 2.5rem;
+}
+
+.Sticky-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: .25rem;
+    aspect-ratio: 3 / 2;
+
+}
+.Sticky-info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-top:8rem;
+}
+.Sticky-p {
+    font-size: var(--font-size-l);
+}
+.Sticky-h3 {
+    font-size: var(--font-size-m);
+}
+.Sticky-a {
+    font-size: var(--font-size-xs);
+    display: inline-block;
+    align-self: flex-start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.41);
+
+}
+
+
+
+
+/* 10. Sección Magazine-----------------------------------------------------------*/
+
+.Magazine {
+    width: 100%;
+}
+.Magazine-carrousel {
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; 
+}
+.Magazine-article {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    flex: 0 0 360px; /* Ajusta el ancho de cada card */
+    scroll-snap-align: start; /* Alinea la card al inicio del contenedor */
+}
+
+
+.Magazine-picture {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.Magazine-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+.Magazine-h3 {
+    font-size: var(--font-size-s);
+    margin-bottom: 1.5rem;}
+.Magazine-a {
+    font-size: var(--font-size-xs);
+    display: inline-block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.41);
+    
+}
+.Magazine-a {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto; /*espacio sobrante queda entre titulo-enlace y están todos alineados */
+}
+
+    
+
+
+    @media (hover: hover) and (pointer: fine) {
+        .Magazine-article:hover .Magazine-img {
+            transform: scale(1.06);
+        }
+    }
+    
+    
+/* 11. Sección Newsletter -----------------------------------------------------*/
+
+
+.Newsletter {
+    width: 100%;
+}
+.Newsletter-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.Newsletter-picture {
+    width: 100%;
+}
+
+.Newsletter-img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    border-radius: .25rem;
+}
+.Newsletter-info {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2.5rem;
+}
+.Newsletter-title {
+    font-size: var(--font-size-l);
+    font-weight: 400;
+}
+
+.Newsletter-form {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+.Newsletter-label {
+    font-size: var(--font-size-xs);
+
+}
+.Newsletter-input {
+    font-size: var(--font-size-xs);
+    background-color: rgba(255, 255, 255, 0.378);
+    border-bottom: 1px solid black;
+
+}
+.Newsletter-btn {
+    font-size: var(--font-size-xs);
+    background-color: rgb(246, 246, 246);
+    color: black;
+    padding: 16px 12px;
+    border-radius: 15px;
+    
+}
+
+
+
+/* 12. Sección footer---------------------------------------------*/
+
+
+.Footer {
+    width: 100%;
+    display: flex;
+}
+.Footer-wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.41);
+
+
+}
+.Footer-h3 {
+    font-size: var(--font-size-xxl);
+}
+.Footer-contact {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+.Footer-li {}
+
+.Footer-email {
+    font-size: var(--font-size-xl);
+}
+
+
+.Footer-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+
+}
+.Footer-li {
+    width: 2rem;
+    height: auto;
+}
+.Footer-a {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE ----------------------------------------------*/
+
+
+
+@media (max-width: 1024px) {
+
+ /* .Header-h1 {font-size: var(--font-size-xl);} */
+    .Hero-h2 {font-size: var(--font-size-xl);}
+    .Newsletter-title {font-size: var(--font-size-m);}
+    .Footer-p {font-size: var(--font-size-m);}}
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px) {
+    
+
+    .Header-nav { 
+    display: none;
+    position: fixed;
+    top: 5rem;
+    bottom: 0;
+    right: 0;
+    width: min(18rem, calc(100vw - 2rem));
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    overflow-y: auto;
+    }
+
+  /* Cuando se le añade la clase .is-open via JS la mostramos como overlay */
+    .Header-nav.is-open {
+    display: block;
+    }
+  
+    .Header-Wrapper {align-items: center;}
+
+    /* Para mostrar el botón hamburguesa*/
+    .Header-menuButton {display: flex;}
+
+    .Header-nav {display: none;}
+    .Header-nav.is-open {display: block;}
+    .Header-ul {
+        width: fit-content;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        font-size: var(--font-size-m);
+    }
+
+    .Text-h2 {font-size: var(--font-size-xl);}
+
+    .About-p {font-size: var(--font-size-l);}
+
+    .Workshops-card {flex: 0 0 320px; }
+
+    .Names-ul {gap: 2rem;}
+    .Names-li {font-size: var(--font-size-m);}
+
+
+    .Sticky-p {font-size: var(--font-size-m);}
+    .Sticky-h3 {font-size: var(--font-size-s);}
+
+    .Magazine-article {flex: 0 0 320px;} 
+
+    .Newsletter-title {font-size: var(--font-size-s);}
+    .Newsletter-label, .Newsletter-btn {font-size: var(--font-size-xxs);}
+
+    .Footer-email {font-size: var(--font-size-s);}
+    .Footer-li {width: 1.5rem;}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+
+    .Wrapper--main {
+    padding: 10rem 1rem;
+    }
+
+    .Section-h2{font-size: var(--font-size-xs);}
+    .Section-a{font-size: var(--font-size-xxs);}
+ 
+    .Header-h1 { font-size: var(--font-size-m);}
+    
+    .Slider-container {grid-template-columns: minmax(0, 1fr); }
+
+    .Partners-img {height: 36px;}
+
+    .About-text {width:100%;}
+    .About-p {font-size: var(--font-size-m);}
+
+    .Workshops-h3 { font-size: var(--font-size-m);}
+
+    .Sticky-wrapper {
+    grid-template-columns: 1fr;}
+    .Sticky-media {
+    position: relative;
+    top: 1rem;
+    margin-bottom: 1rem;}
+    .Sticky-info {margin-top: 0;}
+    .Magazine-article {flex: 0 0 360px;} /*Para que vuelva a ser un poco más ancha*/
+    .Magazine-h3 {
+        font-size: var(--font-size-s);
+        margin-bottom: 1rem;}
+    .Magazine-a {font-size: var(--font-size-xxs);}
+
+    .Newsletter-wrapper{grid-template-columns: 1fr;}
+
+    .Footer-h3 {font-size: var(--font-size-l);}
+    .Footer-email {font-size: var(--font-size-xs);}
+}
